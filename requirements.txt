@@ -1,0 +1,6 @@
+# Mini IDS - Requirements
+# Core (always needed - built into Python)
+# No pip install needed for simulation mode!
+
+# Optional: needed ONLY for live capture and PCAP analysis
+scapy>=2.5.0
