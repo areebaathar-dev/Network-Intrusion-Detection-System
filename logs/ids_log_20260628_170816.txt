@@ -1,0 +1,6 @@
+[17:08:17] !! SUSPICIOUS_IP | MEDIUM | 185.220.101.47 -> 192.168.1.100:50 | Traffic from blacklisted IP 185.220.101.47: Known Tor exit node
+[17:08:18] !! PORT_SCAN | MEDIUM | 185.220.101.47 -> 192.168.1.100:563 | Port scan detected: 10 unique ports probed in 10s window. Ports: [50, 415, 534, 563, 710, 712, 775, 910, 926, 953]...
+[17:08:19] !!! SYN_FLOOD | HIGH | 185.220.101.47 -> 192.168.1.100:670 | SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.
+[17:08:25] !! SUSPICIOUS_IP | MEDIUM | 91.108.4.1 -> 192.168.1.100:80 | Traffic from blacklisted IP 91.108.4.1: Telegram C2 range
+[17:08:26] !!! SYN_FLOOD | HIGH | 91.108.4.1 -> 192.168.1.100:80 | SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible DoS/DDoS attack.
+[17:08:33] !!! BRUTE_FORCE | HIGH | 203.0.113.55 -> 192.168.1.5:22 | Brute force attack on SSH (port 22): 8 attempts from 203.0.113.55 in 10s.

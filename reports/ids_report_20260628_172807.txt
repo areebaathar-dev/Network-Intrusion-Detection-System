@@ -1,0 +1,112 @@
+=================================================================
+       MINI IDS — INTRUSION DETECTION SYSTEM REPORT
+=================================================================
+  Generated   : 2026-06-28 17:28:07
+  Session     : 17:25:25 → 17:28:07 (162.3s)
+=================================================================
+
+  EXECUTIVE SUMMARY
+  ----------------------------------------
+  Total Packets Analysed : 583
+  Total Threats Detected : 9
+  HIGH severity alerts   : 3
+  MEDIUM severity alerts : 4
+  LOW severity alerts    : 2
+  Blocked IPs            : 3
+
+  THREAT BREAKDOWN
+  ----------------------------------------
+  SUSPICIOUS_IP                  3 alert(s)
+  SYN_FLOOD                      2 alert(s)
+  PAYLOAD_ANOMALY                2 alert(s)
+  PORT_SCAN                      1 alert(s)
+  BRUTE_FORCE                    1 alert(s)
+
+  PROTOCOL DISTRIBUTION
+  ----------------------------------------
+  TCP           440 packets  (75.5%)
+  UDP            96 packets  (16.5%)
+  ICMP           47 packets  (8.1%)
+
+  TOP ATTACKING IPs
+  ----------------------------------------
+  185.220.101.47         3 alerts [BLOCKED]
+  45.142.212.100         3 alerts
+  91.108.4.1             2 alerts [BLOCKED]
+  203.0.113.55           1 alerts [BLOCKED]
+
+  BLOCKED IPs
+  ----------------------------------------
+  203.0.113.55
+  91.108.4.1
+  185.220.101.47
+
+  DETAILED ALERT LOG
+  ----------------------------------------
+
+  [17:25:25] SUSPICIOUS_IP | MEDIUM
+  Source  : 185.220.101.47
+  Target  : 192.168.1.100:457
+  Detail  : Traffic from blacklisted IP 185.220.101.47: Known Tor exit node
+  Action  : ALERTED
+  ----------------------------------------
+
+  [17:25:26] PORT_SCAN | MEDIUM
+  Source  : 185.220.101.47
+  Target  : 192.168.1.100:996
+  Detail  : Port scan detected: 10 unique ports probed in 10s window. Ports: [31, 46, 193, 295, 313, 457, 505, 852, 893, 996]...
+  Action  : BLOCKED
+  ----------------------------------------
+
+  [17:25:28] SYN_FLOOD | HIGH
+  Source  : 185.220.101.47
+  Target  : 192.168.1.100:237
+  Detail  : SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.
+  Action  : BLOCKED
+  ----------------------------------------
+
+  [17:25:33] SUSPICIOUS_IP | MEDIUM
+  Source  : 91.108.4.1
+  Target  : 192.168.1.100:80
+  Detail  : Traffic from blacklisted IP 91.108.4.1: Telegram C2 range
+  Action  : ALERTED
+  ----------------------------------------
+
+  [17:25:34] SYN_FLOOD | HIGH
+  Source  : 91.108.4.1
+  Target  : 192.168.1.100:80
+  Detail  : SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible DoS/DDoS attack.
+  Action  : BLOCKED
+  ----------------------------------------
+
+  [17:25:42] BRUTE_FORCE | HIGH
+  Source  : 203.0.113.55
+  Target  : 192.168.1.5:22
+  Detail  : Brute force attack on SSH (port 22): 8 attempts from 203.0.113.55 in 10s.
+  Action  : BLOCKED
+  ----------------------------------------
+
+  [17:25:57] SUSPICIOUS_IP | MEDIUM
+  Source  : 45.142.212.100
+  Target  : 192.168.1.50:8080
+  Detail  : Traffic from blacklisted IP 45.142.212.100: Known scanner
+  Action  : ALERTED
+  ----------------------------------------
+
+  [17:25:57] PAYLOAD_ANOMALY | LOW
+  Source  : 45.142.212.100
+  Target  : 192.168.1.50:8080
+  Detail  : Oversized TCP payload: 3927 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [17:25:57] PAYLOAD_ANOMALY | LOW
+  Source  : 45.142.212.100
+  Target  : 192.168.1.50:8080
+  Detail  : Oversized TCP payload: 5229 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+=================================================================
+  END OF REPORT
+=================================================================

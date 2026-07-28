@@ -1,0 +1,5 @@
+timestamp,threat_type,severity,src_ip,dst_ip,dst_port,description,packet_count,action_taken
+2026-06-29T12:37:39.476087,SUSPICIOUS_IP,MEDIUM,91.108.4.1,192.168.1.100,80,Traffic from blacklisted IP 91.108.4.1: Telegram C2 range,1,ALERTED
+2026-06-29T12:37:39.476087,SUSPICIOUS_IP,MEDIUM,185.220.101.47,192.168.1.20,443,Traffic from blacklisted IP 185.220.101.47: Known Tor exit node,1,ALERTED
+2026-06-29T12:37:39.476087,SUSPICIOUS_IP,MEDIUM,45.142.212.100,192.168.1.50,8080,Traffic from blacklisted IP 45.142.212.100: Known scanner,1,ALERTED
+2026-06-29T12:37:39.476087,PAYLOAD_ANOMALY,LOW,45.142.212.100,192.168.1.50,8080,Oversized TCP payload: 6043 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.,1,LOGGED

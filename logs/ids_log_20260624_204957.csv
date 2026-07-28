@@ -1,0 +1,6 @@
+timestamp,threat_type,severity,src_ip,dst_ip,dst_port,description,packet_count,action_taken
+2026-06-24T20:49:58.506407,SUSPICIOUS_IP,MEDIUM,185.220.101.47,192.168.1.100,546,Traffic from blacklisted IP 185.220.101.47: Known Tor exit node,1,ALERTED
+2026-06-24T20:49:59.496407,PORT_SCAN,MEDIUM,185.220.101.47,192.168.1.100,202,"Port scan detected: 10 unique ports probed in 10s window. Ports: [21, 25, 202, 209, 546, 589, 689, 696, 748, 885]...",10,BLOCKED
+2026-06-24T20:50:00.596407,SYN_FLOOD,HIGH,185.220.101.47,192.168.1.100,565,SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.,20,BLOCKED
+2026-06-24T20:50:05.706407,SUSPICIOUS_IP,MEDIUM,91.108.4.1,192.168.1.100,80,Traffic from blacklisted IP 91.108.4.1: Telegram C2 range,1,ALERTED
+2026-06-24T20:50:07.511407,SYN_FLOOD,HIGH,91.108.4.1,192.168.1.100,80,SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible DoS/DDoS attack.,20,BLOCKED

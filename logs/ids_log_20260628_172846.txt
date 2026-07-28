@@ -1,0 +1,9 @@
+[17:28:46] !! SUSPICIOUS_IP | MEDIUM | 185.220.101.47 -> 192.168.1.100:877 | Traffic from blacklisted IP 185.220.101.47: Known Tor exit node
+[17:28:47] !! PORT_SCAN | MEDIUM | 185.220.101.47 -> 192.168.1.100:85 | Port scan detected: 10 unique ports probed in 10s window. Ports: [85, 167, 357, 435, 520, 591, 649, 846, 877, 887]...
+[17:28:49] !!! SYN_FLOOD | HIGH | 185.220.101.47 -> 192.168.1.100:287 | SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.
+[17:28:54] !! SUSPICIOUS_IP | MEDIUM | 91.108.4.1 -> 192.168.1.100:80 | Traffic from blacklisted IP 91.108.4.1: Telegram C2 range
+[17:28:55] !!! SYN_FLOOD | HIGH | 91.108.4.1 -> 192.168.1.100:80 | SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible DoS/DDoS attack.
+[17:29:03] !!! BRUTE_FORCE | HIGH | 203.0.113.55 -> 192.168.1.5:22 | Brute force attack on SSH (port 22): 8 attempts from 203.0.113.55 in 10s.
+[17:29:18] !! SUSPICIOUS_IP | MEDIUM | 45.142.212.100 -> 192.168.1.50:8080 | Traffic from blacklisted IP 45.142.212.100: Known scanner
+[17:29:18] ! PAYLOAD_ANOMALY | LOW | 45.142.212.100 -> 192.168.1.50:8080 | Oversized TCP payload: 3819 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+[17:29:18] ! PAYLOAD_ANOMALY | LOW | 45.142.212.100 -> 192.168.1.50:8080 | Oversized TCP payload: 4035 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.

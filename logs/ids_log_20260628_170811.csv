@@ -1,0 +1,4 @@
+timestamp,threat_type,severity,src_ip,dst_ip,dst_port,description,packet_count,action_taken
+2026-06-28T17:08:12.747368,SUSPICIOUS_IP,MEDIUM,185.220.101.47,192.168.1.100,202,Traffic from blacklisted IP 185.220.101.47: Known Tor exit node,1,ALERTED
+2026-06-28T17:08:13.737368,PORT_SCAN,MEDIUM,185.220.101.47,192.168.1.100,76,"Port scan detected: 10 unique ports probed in 10s window. Ports: [17, 76, 140, 153, 202, 304, 389, 418, 440, 975]...",10,BLOCKED
+2026-06-28T17:08:14.837368,SYN_FLOOD,HIGH,185.220.101.47,192.168.1.100,872,SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.,20,BLOCKED

@@ -1,0 +1,148 @@
+=================================================================
+       NETWORK INTRUSION DETECTION SYSTEM REPORT
+=================================================================
+  Generated   : 2026-06-30 01:06:46
+  Session     : 01:04:41 → 01:06:46 (124.9s)
+=================================================================
+
+  EXECUTIVE SUMMARY
+  ----------------------------------------
+  Total Packets Analysed : 580
+  Total Threats Detected : 15
+  HIGH severity alerts   : 0
+  MEDIUM severity alerts : 0
+  LOW severity alerts    : 15
+  Blocked IPs            : 0
+
+  THREAT BREAKDOWN
+  ----------------------------------------
+  PAYLOAD_ANOMALY                15 alert(s)
+
+  PROTOCOL DISTRIBUTION
+  ----------------------------------------
+  TCP           380 packets  (65.5%)
+  UDP           200 packets  (34.5%)
+
+  TOP ATTACKING IPs
+  ----------------------------------------
+  192.168.100.61         10 alerts
+  172.64.146.215         2 alerts
+  104.18.32.47           1 alerts
+  40.79.167.9            1 alerts
+  57.144.149.32          1 alerts
+
+  BLOCKED IPs
+  ----------------------------------------
+  None
+
+  DETAILED ALERT LOG
+  ----------------------------------------
+
+  [01:04:50] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 104.16.102.112:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:04:52] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 172.64.146.215:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:04:54] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 20.42.65.94:443
+  Detail  : Oversized TCP payload: 1466 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:08] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 104.18.32.47:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:10] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 104.18.32.47:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:10] PAYLOAD_ANOMALY | LOW
+  Source  : 104.18.32.47
+  Target  : 192.168.100.61:53829
+  Detail  : Oversized TCP payload: 1466 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:18] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 172.64.146.215:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:19] PAYLOAD_ANOMALY | LOW
+  Source  : 172.64.146.215
+  Target  : 192.168.100.61:53842
+  Detail  : Oversized TCP payload: 2878 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:19] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 172.64.146.215:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:20] PAYLOAD_ANOMALY | LOW
+  Source  : 172.64.146.215
+  Target  : 192.168.100.61:53842
+  Detail  : Oversized TCP payload: 1466 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:20] PAYLOAD_ANOMALY | LOW
+  Source  : 40.79.167.9
+  Target  : 192.168.100.61:53949
+  Detail  : Oversized TCP payload: 8526 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:28] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 104.16.102.112:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:30] PAYLOAD_ANOMALY | LOW
+  Source  : 57.144.149.32
+  Target  : 192.168.100.61:53104
+  Detail  : Oversized TCP payload: 2838 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:38] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 57.144.148.145:443
+  Detail  : Oversized TCP payload: 1446 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+  [01:05:41] PAYLOAD_ANOMALY | LOW
+  Source  : 192.168.100.61
+  Target  : 104.18.32.47:443
+  Detail  : Oversized TCP payload: 1454 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.
+  Action  : LOGGED
+  ----------------------------------------
+
+=================================================================
+  END OF REPORT
+=================================================================

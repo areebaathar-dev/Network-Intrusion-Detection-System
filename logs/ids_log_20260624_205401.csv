@@ -1,0 +1,10 @@
+timestamp,threat_type,severity,src_ip,dst_ip,dst_port,description,packet_count,action_taken
+2026-06-24T20:54:02.363635,SUSPICIOUS_IP,MEDIUM,185.220.101.47,192.168.1.100,936,Traffic from blacklisted IP 185.220.101.47: Known Tor exit node,1,ALERTED
+2026-06-24T20:54:03.353635,PORT_SCAN,MEDIUM,185.220.101.47,192.168.1.100,112,"Port scan detected: 10 unique ports probed in 10s window. Ports: [28, 43, 91, 98, 112, 199, 729, 775, 794, 936]...",10,BLOCKED
+2026-06-24T20:54:04.453635,SYN_FLOOD,HIGH,185.220.101.47,192.168.1.100,799,SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possible DoS/DDoS attack.,20,BLOCKED
+2026-06-24T20:54:09.563635,SUSPICIOUS_IP,MEDIUM,91.108.4.1,192.168.1.100,80,Traffic from blacklisted IP 91.108.4.1: Telegram C2 range,1,ALERTED
+2026-06-24T20:54:11.368635,SYN_FLOOD,HIGH,91.108.4.1,192.168.1.100,80,SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible DoS/DDoS attack.,20,BLOCKED
+2026-06-24T20:54:18.473635,BRUTE_FORCE,HIGH,203.0.113.55,192.168.1.5,22,Brute force attack on SSH (port 22): 8 attempts from 203.0.113.55 in 10s.,8,BLOCKED
+2026-06-24T20:54:33.563635,SUSPICIOUS_IP,MEDIUM,45.142.212.100,192.168.1.50,8080,Traffic from blacklisted IP 45.142.212.100: Known scanner,1,ALERTED
+2026-06-24T20:54:33.563635,PAYLOAD_ANOMALY,LOW,45.142.212.100,192.168.1.50,8080,Oversized TCP payload: 2934 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.,1,LOGGED
+2026-06-24T20:54:34.543635,PAYLOAD_ANOMALY,LOW,45.142.212.100,192.168.1.50,8080,Oversized TCP payload: 6529 bytes (threshold: 1400B). Possible data exfiltration or buffer overflow attempt.,1,LOGGED

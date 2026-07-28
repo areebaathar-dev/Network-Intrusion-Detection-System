@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mini IDS Report</title>
+<style>
+  body {font-family:Arial,sans-serif;background:#0d1117;color:#c9d1d9;margin:0;padding:20px}
+  h1 {color:#58a6ff;border-bottom:1px solid #30363d;padding-bottom:10px}
+  h2 {color:#79c0ff;margin-top:30px}
+  .cards {display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}
+  .card {background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px 24px;min-width:150px}
+  .card .num {font-size:2em;font-weight:bold}
+  .card .lbl {font-size:0.8em;color:#8b949e;margin-top:4px}
+  .high   {color:#f85149} .medium {color:#d29922} .low {color:#3fb950}
+  table {border-collapse:collapse;width:100%;margin-top:10px}
+  th {background:#21262d;padding:8px 12px;text-align:left;border-bottom:1px solid #30363d}
+  td {padding:7px 12px;border-bottom:1px solid #21262d;font-size:13px}
+  tr:hover td {background:#161b22}
+  .blocked {background:#3d1111;padding:4px 8px;border-radius:4px;font-family:monospace}
+  footer {margin-top:40px;color:#8b949e;font-size:12px;border-top:1px solid #30363d;padding-top:12px}
+</style>
+</head>
+<body>
+<h1>🛡️ Mini IDS — Intrusion Detection Report</h1>
+<p style="color:#8b949e">Generated: 2026-06-28 17:28:07 &nbsp;|&nbsp;
+Session: 17:25:25 → 17:28:07
+(162.3s)</p>
+
+<h2>Summary</h2>
+<div class="cards">
+  <div class="card"><div class="num" style="color:#58a6ff">583</div><div class="lbl">Packets Captured</div></div>
+  <div class="card"><div class="num high">9</div><div class="lbl">Threats Detected</div></div>
+  <div class="card"><div class="num high">3</div><div class="lbl">HIGH Severity</div></div>
+  <div class="card"><div class="num medium">4</div><div class="lbl">MEDIUM Severity</div></div>
+  <div class="card"><div class="num low">2</div><div class="lbl">LOW Severity</div></div>
+  <div class="card"><div class="num" style="color:#f85149">3</div><div class="lbl">IPs Blocked</div></div>
+</div>
+
+<h2>Alert Details</h2>
+<table>
+  <tr><th>Time</th><th>Threat</th><th>Severity</th><th>Source IP</th><th>Target</th><th>Description</th><th>Action</th></tr>
+  
+            <tr>
+              <td>17:25:25</td>
+              <td>SUSPICIOUS_IP</td>
+              <td style="color:#f39c12;font-weight:bold">MEDIUM</td>
+              <td>185.220.101.47</td>
+              <td>192.168.1.100:457</td>
+              <td>Traffic from blacklisted IP 185.220.101.47: Known Tor exit node...</td>
+              <td>ALERTED</td>
+            </tr>
+            <tr>
+              <td>17:25:26</td>
+              <td>PORT_SCAN</td>
+              <td style="color:#f39c12;font-weight:bold">MEDIUM</td>
+              <td>185.220.101.47</td>
+              <td>192.168.1.100:996</td>
+              <td>Port scan detected: 10 unique ports probed in 10s window. Ports: [31, ...</td>
+              <td>BLOCKED</td>
+            </tr>
+            <tr>
+              <td>17:25:28</td>
+              <td>SYN_FLOOD</td>
+              <td style="color:#e74c3c;font-weight:bold">HIGH</td>
+              <td>185.220.101.47</td>
+              <td>192.168.1.100:237</td>
+              <td>SYN flood detected: 20 SYN packets from 185.220.101.47 in 10s. Possibl...</td>
+              <td>BLOCKED</td>
+            </tr>
+            <tr>
+              <td>17:25:33</td>
+              <td>SUSPICIOUS_IP</td>
+              <td style="color:#f39c12;font-weight:bold">MEDIUM</td>
+              <td>91.108.4.1</td>
+              <td>192.168.1.100:80</td>
+              <td>Traffic from blacklisted IP 91.108.4.1: Telegram C2 range...</td>
+              <td>ALERTED</td>
+            </tr>
+            <tr>
+              <td>17:25:34</td>
+              <td>SYN_FLOOD</td>
+              <td style="color:#e74c3c;font-weight:bold">HIGH</td>
+              <td>91.108.4.1</td>
+              <td>192.168.1.100:80</td>
+              <td>SYN flood detected: 20 SYN packets from 91.108.4.1 in 10s. Possible Do...</td>
+              <td>BLOCKED</td>
+            </tr>
+            <tr>
+              <td>17:25:42</td>
+              <td>BRUTE_FORCE</td>
+              <td style="color:#e74c3c;font-weight:bold">HIGH</td>
+              <td>203.0.113.55</td>
+              <td>192.168.1.5:22</td>
+              <td>Brute force attack on SSH (port 22): 8 attempts from 203.0.113.55 in 1...</td>
+              <td>BLOCKED</td>
+            </tr>
+            <tr>
+              <td>17:25:57</td>
+              <td>SUSPICIOUS_IP</td>
+              <td style="color:#f39c12;font-weight:bold">MEDIUM</td>
+              <td>45.142.212.100</td>
+              <td>192.168.1.50:8080</td>
+              <td>Traffic from blacklisted IP 45.142.212.100: Known scanner...</td>
+              <td>ALERTED</td>
+            </tr>
+            <tr>
+              <td>17:25:57</td>
+              <td>PAYLOAD_ANOMALY</td>
+              <td style="color:#27ae60;font-weight:bold">LOW</td>
+              <td>45.142.212.100</td>
+              <td>192.168.1.50:8080</td>
+              <td>Oversized TCP payload: 3927 bytes (threshold: 1400B). Possible data ex...</td>
+              <td>LOGGED</td>
+            </tr>
+            <tr>
+              <td>17:25:57</td>
+              <td>PAYLOAD_ANOMALY</td>
+              <td style="color:#27ae60;font-weight:bold">LOW</td>
+              <td>45.142.212.100</td>
+              <td>192.168.1.50:8080</td>
+              <td>Oversized TCP payload: 5229 bytes (threshold: 1400B). Possible data ex...</td>
+              <td>LOGGED</td>
+            </tr>
+</table>
+
+<h2>Blocked IPs</h2>
+<span class="blocked">203.0.113.55</span> <span class="blocked">91.108.4.1</span> <span class="blocked">185.220.101.47</span> 
+
+<footer>Mini IDS — Network Intrusion Detection System | CS Security Project</footer>
+</body></html>
